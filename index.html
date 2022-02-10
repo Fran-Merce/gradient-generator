@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/styles/cards.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/nav.css">
     <title>Gradient Gen</title>
 </head>
+
 <body>
-    <button class="btn-changeColor" id="btn-changeColor">Change color</button>
-    <textarea id="copy"></textarea>
-    <di id="options">
-        <p id="radial">Radial Gradient</p>
-        <p id="conic" >Conic Gradient</p>
-        <p id="linear" >Linear Gradient</p>
+    
+    <header>
+        <nav class="nav">
+            <ul class="ul-nav" id="options">
+                <li class="optionsLi " id="radial">Radial Gradient</li>
+                <li  class="optionsLi" id="conic">Conic Gradient</li>
+                <li class="optionsLi" id="linear">Linear Gradient</li>
+            </ul>
+           
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <div id="cardsContainer" class="cards-container">
+            <div id="cardInit"></div>
+        </div>
+
     </div>
+
     <script src="/src/index.js" type="module"></script>
+    
 </body>
+
 </html>

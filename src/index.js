@@ -1,27 +1,27 @@
-import {
-  getLinearGradient,
-  getRadialGradient,
-  getConicGradient,
-} from "/src/gradients-generator.js";
-import {hadlerOptions,currentOption} from "/src/options.js"
-document.querySelector("body").style.background = getLinearGradient();
-const btnChangeColor = document.querySelector("#btn-changeColor");
-const body = document.querySelector("body");
+import { BgCardsChange } from "./cards.js";
+import { handlerCopy } from "/src/copy.js";
+import { hadlerOptions, currentOption } from "/src/options.js";
+import { observatorLastCard, observatorNav } from "/src/scroll.js";
+import {handlerOptionGradientStyle} from "./switchesStyles.js";
+export const cardsBg = document.querySelectorAll(".cardbg");
+export const cardContainer = document.querySelector("#cardsContainer");
+export const optionsContainer = document.querySelector("#options");
+export const nav = document.querySelector(".nav");
 
-console.log(document.querySelector("body").style.background);
+let lastCard = cardContainer.lastElementChild;
+const optionsGradient = document.querySelectorAll(".optionsLi");
 
-const bgstyle = () => {
-  const bg = document.querySelector("body").style.background;
-  const bgFormatedCss = `background: ${bg.slice(0, -1)} 100%)`;
-  document.querySelector("#copy").innerHTML = bgFormatedCss;
-};
+document.addEventListener("DOMContentLoaded", () => cardsBg.forEach(card => card.style.background = currentOption()));
 
-btnChangeColor.addEventListener("click", () => {
-  document.querySelector("body").style.background = currentOption();
-  bgstyle();
-});
+cardContainer.addEventListener("click", e =>  handlerCopy(e));
 
-document.querySelector("#options").addEventListener("click", (e) => {
-  hadlerOptions(e);
-});
-bgstyle()
+optionsGradient.forEach(option => {
+  option.addEventListener("click", e => {
+    handlerOptionGradientStyle(e);
+    hadlerOptions(e);
+    BgCardsChange();
+  });
+})
+
+observatorNav.observe(nav);
+observatorLastCard.observe(lastCard);
