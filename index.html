@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/48b7fe6e1c.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="/styles/cards.css">
-    <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
     <title>Gradient Gen</title>
 </head>
 
-<body>
-    
-    <header>
+<body >
+    <a href="#header" id="arrowHome" class="arrow-up hidden"><span class="fa-solid fa-arrow-up"></span></a>
+    <header id="header" >
         <nav class="nav">
+        
+            <span id="menuMobileBtn" class="menu-mobile fa-solid fa-bars" ></span>
             <ul class="ul-nav" id="options">
-                <li class="optionsLi " id="radial">Radial Gradient</li>
+                <li class="optionsLi" id="radial">Radial Gradient</li>
                 <li  class="optionsLi" id="conic">Conic Gradient</li>
                 <li class="optionsLi ul-nav-active" id="linear">Linear Gradient</li>
             </ul>
@@ -29,6 +34,7 @@
         <div id="cardsContainer" class="cards-container">
             <div id="cardInit"></div>
         </div>
+      
 
     </div>
 

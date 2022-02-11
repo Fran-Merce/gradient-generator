@@ -1,0 +1,74 @@
+@media (max-width: 1525px) {
+  .cards-container {
+    width: 80%;
+    gap: 5px;
+  }
+  .cards-container .card {
+    margin: 1.5rem;
+  }
+}
+
+@media (max-width: 1270px) {
+  .cards-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1075px) {
+  .cards-container {
+    width: 100%;
+  }
+  .cards-container .card {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 726px) {
+  .menu-mobile {
+    display: block;
+    z-index: 20;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+  }
+  .nav-mobile-active {
+    height: 100vh;
+    background-color: rgba(255, 0, 170, 0.8);
+  }
+  .ul-nav {
+    position: absolute;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 90%;
+    display: none;
+  }
+  .ul-nav li {
+    margin: 2rem;
+    font-size: 1.3rem;
+  }
+  .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards-container {
+    width: 100%;
+  }
+  .cards-container .card {
+    margin: 0.2rem;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

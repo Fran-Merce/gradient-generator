@@ -1,27 +1,29 @@
 import { BgCardsChange } from "./cards.js";
 import { handlerCopy } from "/src/copy.js";
-import { hadlerOptions, currentOption } from "/src/options.js";
-import { observatorLastCard, observatorNav } from "/src/scroll.js";
-import {handlerOptionGradientStyle} from "./switchesStyles.js";
-export const cardsBg = document.querySelectorAll(".cardbg");
-export const cardContainer = document.querySelector("#cardsContainer");
-export const optionsContainer = document.querySelector("#options");
-export const nav = document.querySelector(".nav");
+import { currentOption } from "/src/options.js";
 
+import { handlerNavMobile } from "./switchesStyles.js";
+import { observatorNav,observatorLastCard} from "./scroll.js";
+ const cardsBg = document.querySelectorAll(".cardbg");
+const cardContainer = document.querySelector("#cardsContainer");
+ const optionsContainer = document.querySelector("#options");
+const menuMobileBtn = document.querySelector("#menuMobileBtn");
+const nav = document.querySelector(".nav");
 let lastCard = cardContainer.lastElementChild;
-const optionsGradient = document.querySelectorAll(".optionsLi");
 
-document.addEventListener("DOMContentLoaded", () => cardsBg.forEach(card => card.style.background = currentOption()));
+document.addEventListener("DOMContentLoaded", () =>
+  cardsBg.forEach(card => card.style.background = currentOption())
+);
 
-cardContainer.addEventListener("click", e =>  handlerCopy(e));
+cardContainer.addEventListener("click", e => handlerCopy(e));
 
-optionsGradient.forEach(option => {
-  option.addEventListener("click", e => {
-    handlerOptionGradientStyle(e);
-    hadlerOptions(e);
-    BgCardsChange();
-  });
-})
+menuMobileBtn.addEventListener("click", handlerNavMobile);
 
-observatorNav.observe(nav);
+export{
+  cardsBg,
+  cardContainer,
+  optionsContainer
+}
+
 observatorLastCard.observe(lastCard);
+observatorNav.observe(nav);
