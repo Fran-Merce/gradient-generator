@@ -1,4 +1,6 @@
 
+import{handlerOptionGradientStyle} from "/src/switchesStyles.js"
+import { BgCardsChange } from "./cards.js";
 import {
   getLinearGradient,
   getRadialGradient,
@@ -7,7 +9,7 @@ import {
 
 export let currentOption = getLinearGradient;
 
-export const hadlerOptions = (e) => {
+export const hadlerOptions = e => {
   if (e.target.id === "radial") {
     currentOption = getRadialGradient;
   } else if (e.target.id === "conic") {
@@ -16,3 +18,11 @@ export const hadlerOptions = (e) => {
     currentOption = getLinearGradient;
   }
 };
+const optionsGradient = document.querySelectorAll(".optionsLi");
+optionsGradient.forEach(option => {
+option.addEventListener("click", e => {
+    handlerOptionGradientStyle(e);
+    hadlerOptions(e);
+    BgCardsChange();
+  });
+});
