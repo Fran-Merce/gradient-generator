@@ -24,13 +24,8 @@
       border-radius: 50%;
     }
 
-    .cardButtons {
-      width: 80%;
-      height: 20%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: row-reverse;
+    .cardBtnContainer {
+      height: 15%;
     }
 
     .btn-copy {
