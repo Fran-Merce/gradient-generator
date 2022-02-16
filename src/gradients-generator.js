@@ -13,7 +13,7 @@ const getColor = () => {
 
 const getLinearGradient = () => `linear-gradient(${randomGeneratorNum(360)}deg,${getColor()},${getColor()}`;
 const getRadialGradient=()=>`radial-gradient(${getColor()},${getColor()})`;
-const getConicGradient = ()=>`conic-gradient(from ${randomGeneratorNum(360)}deg at 50% 50% , ${getColor()}, ${getColor()},${getColor()},${getColor()}, ${getColor()}`;
+const getConicGradient = ()=>`conic-gradient(from ${randomGeneratorNum(360)}deg at 50% 50% , ${getColor()}, ${getColor()})`;
 
 export{
   getConicGradient,
