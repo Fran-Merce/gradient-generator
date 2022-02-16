@@ -42,22 +42,8 @@
   border-radius: 50%;
 }
 
-.cards-container .card .cardButtons {
-  width: 80%;
-  height: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+.cards-container .card .cardBtnContainer {
+   height: 15%;
 }
 
 .cards-container .card .btn-copy {
