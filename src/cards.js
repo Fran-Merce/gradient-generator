@@ -3,13 +3,13 @@ import {
 } from "./options.js";
 
 
-export const displayCards = () => {
+const displayCards = () => {
   for (let i = 0; i < 40; i++) {
     const card = document.createElement("div");
     const container = document.querySelector("#cardsContainer");
-    card.classList.add("card");
-    container.insertBefore(card, cardInit);
+    card.classList.add("card");  
     card.innerHTML = createCard();
+    container.appendChild(card)
     if (card) {
       card.childNodes[1].style.background = currentOption();
     }
@@ -19,14 +19,20 @@ export const displayCards = () => {
 const createCard = () => {
   return `
         <div class="cardbg"></div>
-        <div class="cardBtnContainer"">
-     
+        <div class="cardBtnContainer">
           <button class="btn-copy">Copy CSS!</button>
         </div>`;
 };
 
-displayCards();
-export const BgCardsChange = () => {
+const BgCardsChange = () => {
   const cardBg = document.querySelectorAll(".cardbg");
   cardBg.forEach(element => element.style.background = currentOption());
 };
+
+displayCards();
+
+
+export{
+  BgCardsChange,
+  displayCards
+}
