@@ -3,13 +3,13 @@ import {
 } from "./options.js";
 
 
-const displayCards = () => {
+ const displayCards = () => {
   for (let i = 0; i < 40; i++) {
     const card = document.createElement("div");
     const container = document.querySelector("#cardsContainer");
-    card.classList.add("card");  
+    card.classList.add("card");
+    container.insertBefore(card, cardInit);
     card.innerHTML = createCard();
-    container.appendChild(card)
     if (card) {
       card.childNodes[1].style.background = currentOption();
     }
