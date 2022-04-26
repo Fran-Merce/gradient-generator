@@ -1,1 +1,1 @@
-Generador de Gradientes random Pure js
+Generador de Gradientes con Scroll infinito random Pure js
