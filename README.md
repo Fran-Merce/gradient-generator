@@ -1,3 +1,1 @@
-# gradient-generatores
-Generador de Gradientes random
-Pure js
+Generador de Gradientes random Pure js
